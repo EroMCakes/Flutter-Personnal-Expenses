@@ -41,6 +41,7 @@ class MyHomePage extends StatelessWidget {
             UserTransactions(),
           ],
         ),
+      ),
     );
   }
 }
