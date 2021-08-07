@@ -20,7 +20,7 @@ class TransactionList extends StatelessWidget {
                 Container(
                   margin: EdgeInsets.all(10),
                   child: Text(
-                    '${transactions[index].amount} MAD',
+                    '${transactions[index].amount.toStringAsFixed(2)} MAD',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 18,
