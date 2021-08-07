@@ -1,4 +1,3 @@
-import 'package:expensez_app/Widgets/user_transaction.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
