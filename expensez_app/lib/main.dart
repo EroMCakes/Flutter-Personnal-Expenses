@@ -12,6 +12,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Expenses App',
+      theme: ThemeData(
+        primarySwatch: Colors.purple,
+        accentColor: Colors.cyan,
+      ),
       home: MyHomePage(),
     );
   }
