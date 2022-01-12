@@ -13,9 +13,16 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Expenses App',
       theme: ThemeData(
-        primarySwatch: Colors.purple,
-        accentColor: Colors.cyan,
-      ),
+          primarySwatch: Colors.purple,
+          accentColor: Colors.cyan,
+          fontFamily: 'Quicksand',
+          appBarTheme: AppBarTheme(
+              textTheme: ThemeData.light().textTheme.copyWith(
+                      title: TextStyle(
+                    fontFamily: 'Open Sans',
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  )))),
       home: MyHomePage(),
     );
   }
