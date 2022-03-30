@@ -13,16 +13,26 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Expenses App',
       theme: ThemeData(
-          primarySwatch: Colors.purple,
-          accentColor: Colors.cyan,
           fontFamily: 'Quicksand',
+          textTheme: ThemeData.light().textTheme.copyWith(
+                subtitle1: TextStyle(
+                  fontFamily: 'Opensans',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                ),
+              ),
           appBarTheme: AppBarTheme(
-              textTheme: ThemeData.light().textTheme.copyWith(
-                      title: TextStyle(
+              toolbarTextStyle: ThemeData.light().textTheme.copyWith(
+                      subtitle1: TextStyle(
                     fontFamily: 'Open Sans',
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
-                  )))),
+                  )).bodyText2, titleTextStyle: ThemeData.light().textTheme.copyWith(
+                      subtitle1: TextStyle(
+                    fontFamily: 'Open Sans',
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  )).headline6), colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.purple).copyWith(secondary: Colors.cyan)),
       home: MyHomePage(),
     );
   }
@@ -35,18 +45,18 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final List<Trasaction> _userTransactions = [
-    Trasaction(
-      id: 't1',
-      title: 'New Shoes',
-      amount: 99.99,
-      date: DateTime.now(),
-    ),
-    Trasaction(
-      id: 't2',
-      title: 'Weekly Groceries',
-      amount: 19.23,
-      date: DateTime.now(),
-    ),
+    // Trasaction(
+    //   id: 't1',
+    //   title: 'New Shoes',
+    //   amount: 99.99,
+    //   date: DateTime.now(),
+    // ),
+    // Trasaction(
+    //   id: 't2',
+    //   title: 'Weekly Groceries',
+    //   amount: 19.23,
+    //   date: DateTime.now(),
+    // ),
   ];
 
   void _addNewTransaction(String txTitle, double txAmount) {
